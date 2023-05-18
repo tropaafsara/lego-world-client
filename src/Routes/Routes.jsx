@@ -3,6 +3,8 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import AddToy from "../pages/AddToy/AddToy";
+import Bookings from "../pages/Bookings/Bookings";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,15 @@ const router = createBrowserRouter([
         {
             path: 'signup',
             element: <SignUp></SignUp>
+        },
+        {
+            path: 'book/:id',
+            element: <AddToy></AddToy>,
+            loader: ({params})=>fetch(`http://localhost:9000/toys/${params.id}`)
+        },
+        {
+            path: 'bookings',
+            element: <Bookings></Bookings>
         },
       ]
     },
