@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ToysCard from './ToysCard';
+import NavBar from '../../Shared/Navbar/Navbar';
 
 const Toys = () => {
     const [services, setServices] = useState([]);
@@ -12,9 +13,8 @@ const Toys = () => {
     return (
         <div className="mt-4">
         <div className="text-center">
-            <h3 className="text-2xl font-bold text-orange-600">Our Services</h3>
-            <h2 className="text-5xl">Toy Categories</h2>
-            <p>the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which do not look even slightly believable. </p>
+            <h3 className="text-2xl font-bold text-orange-600">Toy Categories</h3>
+           
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
@@ -23,6 +23,7 @@ const Toys = () => {
                     service={service}
                 ></ToysCard>)
             }
+           
         </div>
     </div>
     );

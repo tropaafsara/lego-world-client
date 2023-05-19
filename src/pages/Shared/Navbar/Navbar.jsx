@@ -5,7 +5,6 @@ import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const NavBar = () => {
-
     const {user, logOut} = useContext(AuthContext);
 
     const handleLogOut = () => {
@@ -16,14 +15,16 @@ const NavBar = () => {
 
     const navItems = <>
         <li><Link to="/">Home</Link> </li>
-        <li> <Link to="/about">All Toys</Link> </li>
+        <li> <Link to="/alltoys">All Toys</Link> </li>
         <li> <Link to="/about">Blogs</Link> </li>
-        <li> <Link to="/signup">Sign Up</Link> </li>
+        
         { user?.email ?  <>
+            <li><Link to="/addtoys">Add Toy</Link></li>
             <li><Link to="/bookings">My Toys</Link></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
         </> 
         : <li> <Link to="/login">Login</Link> </li>
+        
        }
     </>
     return (
@@ -48,9 +49,9 @@ const NavBar = () => {
                     {navItems}
                 </ul>
             </div>
-            <div className="navbar-end">
+            {/* <div className="navbar-end">
             <button className="btn btn-outline btn-warning">Appointment</button>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -13,7 +13,7 @@ const ToysCard = ({ service }) => {
                 {/* <p className="text-xl text-orange-500">Price: ${price}</p> */}
                 <div className="card-actions">
                     <Link to={`/book/${_id}`}>
-                        <button className="btn btn-primary">Book Now</button>
+                        <button className="btn btn-primary">Add a toy</button>
                     </Link>
                 </div>
             </div>

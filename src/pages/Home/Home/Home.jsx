@@ -1,13 +1,17 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Toys from '../Toys/Toys';
+import TabCategory from '../../TabCategory/TabCategory';
+
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
             <h1>Home</h1>
-            <Toys></Toys>
+            <TabCategory></TabCategory>
+           
+            
         </div>
     );
 };
