@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AllToys from '../AllToys/AllToys';
 import Toy from '../AllToys/Toy';
+import T from '../../T';
 
 const TabCategory = () => {
 
@@ -17,16 +18,11 @@ const TabCategory = () => {
                 setAllToys(result);
             })
     }, [activeTab])
-
-    // const result = alltoys.filter(toys=>toys.category==activeTab)
-    // setAllToys(result);
-
-
     const handleTabClick = (tabName) => {
         setActiveTab(tabName);
       };
     return (
-        <div className='text-center'>
+        <div className=''>
             <div
               onClick={() => handleTabClick("lego-city")}
               className={`tab  tab2 remote ${
@@ -51,10 +47,16 @@ const TabCategory = () => {
             >
               Lego Cars
             </div>
-            <div>
+            {/* <div >
             {alltoys?.map((toys) => (
                             <Toy key={toys._id}
                             toys={toys}></Toy>
+                        ))}
+            </div> */}
+            <div className='grid lg:grid-cols-3 md:grid-cols-2'>
+            {alltoys?.map((toys) => (
+                            <T key={toys._id}
+                            toys={toys}></T>
                         ))}
             </div>
         </div>
