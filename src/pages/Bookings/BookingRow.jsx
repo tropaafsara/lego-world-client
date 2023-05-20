@@ -1,7 +1,7 @@
 
 import UpdateModal from '../UpdateModal/UpdateModal'
 const BookingRow = ({ booking, handleDelete }) => {
-    const { _id, toyName, price, img, status, availableQuantity, rating } = booking;
+    const { _id, toyName, price, img,  availableQuantity, rating } = booking;
     
 
     return (
@@ -31,10 +31,6 @@ const BookingRow = ({ booking, handleDelete }) => {
                 booking={booking}
                 ></UpdateModal>
                 
-
-                
-                
-
             </th>
         </tr>
     );

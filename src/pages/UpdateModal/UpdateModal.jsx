@@ -10,7 +10,8 @@ const UpdateModal = ({booking}) => {
 
 
     const { toyName, price, img, availableQuantity, rating, description, customerName, category } = booking;
-    console.log(booking);
+    // console.log(booking);
+
     const handleUpdate = event => {
         event.preventDefault();
         
