@@ -60,7 +60,6 @@ const UpdateModal = ({booking}) => {
     return (
 
         <div>
-
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box relative">
@@ -79,7 +78,7 @@ const UpdateModal = ({booking}) => {
                             <label className="label">
                                 <span className="label-text">Toy Name</span>
                             </label>
-                            <input type="text" name="namee" defaultValue={toyName}  className="input input-bordered" />
+                            <input type="text" name="namee" defaultValue={booking.toyName}  className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">

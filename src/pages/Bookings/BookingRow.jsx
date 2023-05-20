@@ -1,8 +1,8 @@
 
 import UpdateModal from '../UpdateModal/UpdateModal'
+
 const BookingRow = ({ booking, handleDelete }) => {
     const { _id, toyName, price, img,  availableQuantity, rating } = booking;
-    
 
     return (
         <tr>
@@ -28,9 +28,9 @@ const BookingRow = ({ booking, handleDelete }) => {
                 <label htmlFor="my-modal-3" className="btn">Update</label>
                 
                 <UpdateModal
+                key={booking._id}
                 booking={booking}
-                ></UpdateModal>
-                
+                ></UpdateModal>             
             </th>
         </tr>
     );
