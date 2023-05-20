@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 
+
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, handleGoogleSignIn } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -21,6 +22,8 @@ const Login = () => {
             })
             .catch(error => console.log(error));
     }
+
+    
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -49,8 +52,11 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Login" />
+                                
                             </div>
                         </form>
+                        <button onClick={handleGoogleSignIn} className="btn btn-primary mt-2" > <span className='text-sm'>Sign In with</span> Google</button>
+                           
                         <p className='my-4 text-center'>New to Car Doctors <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>
                 </div>
