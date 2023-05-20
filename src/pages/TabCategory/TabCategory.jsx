@@ -26,7 +26,7 @@ const TabCategory = () => {
         setActiveTab(tabName);
       };
     return (
-        <div>
+        <div className='text-center'>
             <div
               onClick={() => handleTabClick("lego-city")}
               className={`tab  tab2 remote ${

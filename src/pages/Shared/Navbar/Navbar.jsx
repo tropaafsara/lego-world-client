@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/logo.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -14,16 +14,24 @@ const NavBar = () => {
     }
 
     const navItems = <>
-        <li><Link to="/">Home</Link> </li>
-        <li> <Link to="/alltoys">All Toys</Link> </li>
-        <li> <Link to="/blog">Blogs</Link> </li>
+        <li><NavLink to="/">Home</NavLink> </li>
+        <li> <NavLink to="/alltoys">All Toys</NavLink> </li>
+        <li> <NavLink to="/blog">Blogs</NavLink> </li>
         
         { user?.email ?  <>
-            <li><Link to="/addtoys">Add Toy</Link></li>
-            <li><Link to="/bookings">My Toys</Link></li>
+            <li><NavLink to="/addtoys">Add Toy</NavLink></li>
+            <li><NavLink to="/bookings">My Toys</NavLink></li>
             <li><button onClick={handleLogOut}>Log out</button></li>
+            <div className='group relative m-1 flex justify-center'>
+                    <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
+                    <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">{user.displayName}</span>
+                    </div>
+            {/* <div className='group relative m-1 flex justify-center'>
+                    <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
+                    <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">{user.displayName}</span>
+                    </div> */}
         </> 
-        : <li> <Link to="/login">Login</Link> </li>
+        : <li> <NavLink to="/login">Login</NavLink> </li>
         
        }
     </>

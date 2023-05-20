@@ -10,12 +10,14 @@ import AllToys from "../pages/AllToys/AllToys";
 import UpdateModal from "../pages/UpdateModal/UpdateModal";
 import Blog from "../pages/Blog/Blog";
 import ToyInfo from "../pages/ToyInfo/ToyInfo";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 // import AllToys from "../pages/AllToys/AllToys";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',

@@ -6,7 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const SignUp = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser,userProfile } = useContext(AuthContext);
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -14,17 +14,33 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password)
+        const photo = form.photo.value;
+        // console.log(name, email, password)
 
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log('created user', user)
+                form.reset()
+                userProfile(result.user,name,photo)
             })
             .catch(error => console.log(error))
 
         
+
+
+
+
+
+            //update Profile 
+          userProfile(name,photo)
+          .then(()=>{
+            console.log("profile updagtes");
+          })
+          .catch((error)=>{
+            console.log("error",error);
+          })
 
     }
 
@@ -59,6 +75,12 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <div className="form-control">
+          <label className="label">
+            <span className="label-text">Choose Profile Picture</span>
+          </label>
+          <input type="text" name='photo' placeholder="photo" className="input input-bordered" required />
+        </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
