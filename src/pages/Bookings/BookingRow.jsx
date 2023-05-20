@@ -1,8 +1,13 @@
-import React from 'react';
-
-const BookingRow = ({ booking,handleDelete,  handleBookingConfirm }) => {
+import React, { useState } from 'react';
+import UpdateModal from '../UpdateModal/UpdateModal'
+const BookingRow = ({ booking, handleDelete }) => {
     const { _id, toyName, price, img, status, availableQuantity, rating } = booking;
-    
+
+
+
+
+
+
 
     return (
         <tr>
@@ -25,9 +30,13 @@ const BookingRow = ({ booking,handleDelete,  handleBookingConfirm }) => {
             <td>{availableQuantity}</td>
             <td>{rating}</td>
             <th>
-                {
-                    status === 'update' ? <span className="font-bold text-primary">Updated Successfully</span> :
-                        <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs">Update</button>}
+                {/* <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs" htmlFor="my-modal-5">Update</button> */}
+                
+                <label htmlFor="my-modal-3" className="btn">Update</label>
+                <UpdateModal
+                booking={booking}
+                ></UpdateModal>
+
             </th>
         </tr>
     );

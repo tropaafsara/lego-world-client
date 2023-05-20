@@ -22,7 +22,10 @@ const Toy = ({toys}) => {
             <td>{availableQuantity}</td>
             <td>{customerName}</td>
             <td>{category}</td>
-            <button className='btn btn-ghost btn-xs'>View Details</button>
+            <td>
+            <button  className='btn btn-ghost btn-xs'>View Details</button>
+            </td>
+            
             {/* <th>
                 {
                     status === 'update' ? <span className="font-bold text-primary">Updated Successfully</span> :

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import BookingRow from './BookingRow';
+import Swal from 'sweetalert2';
 
     
 
@@ -16,8 +17,16 @@ const Bookings = () => {
     }, [url]);
 
     const handleDelete = id => {
-        const proceed = confirm('Are you sure you want to delete?')
-        if (proceed) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            
             fetch(`http://localhost:9000/bookings/${id}`, {
             method: 'DELETE'
             })
@@ -25,12 +34,21 @@ const Bookings = () => {
                 .then(data => {
                     console.log(data);
                     if(data.deletedCount >0){
-                        alert('deleted successful')
+                        
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                              'Deleted!',
+                              'Your file has been deleted.',
+                              'success'
+                            )
+                          }
+
                         const remaining = bookings.filter(booking => booking._id !== id);
                         setBookings(remaining);
                     }
                 })
-        }
+          })
+
     }
 
 
@@ -62,6 +80,7 @@ const Bookings = () => {
         <div>
             <h2 className="text-5xl">Your bookings: {bookings.length}</h2>
             <div className="overflow-x-auto w-full">
+                
                 <table className="table w-full">
                     {/* head */}
                     <thead>

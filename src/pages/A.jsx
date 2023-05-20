@@ -1,21 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
 
 
 const A = () => {
     const { user } = useContext(AuthContext);
-
-
-
-    // const {
-    //     register,
-    //     handleSubmit,
-    //     watch,
-    //     formState: { errors },
-    //   } = useForm();
-    //   const onSubmit = (data) =>console.log(data);
-
 
     const [selects, setSelects] = useState();
 
@@ -55,7 +45,13 @@ const A = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('service book successfully')
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Toy Added',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
             }
         })
     }
@@ -136,100 +132,6 @@ const A = () => {
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    //          <div className="">
-    //   <div>
-    //     <div className="col-md-8">
-            
-    //       <form onSubmit={handleSubmit(onSubmit)}>
-    //         {errors.exampleRequired && <span>This field is required</span>}
-    //         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-    //         <input
-             
-    //           className="text-input"
-    //           {...register("image")}
-    //           placeholder="photo url"
-    //           type="url"
-    //         //   defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
-    //         />
-            
-    //         <input
-            
-    //           className="text-input"
-    //           {...register("salary", { required: true })}
-    //           placeholder="Toy Name"
-    //           type="name"
-    //         />
-    //         <input
-            
-    //           className="text-input"
-    //           {...register("salary", { required: true })}
-    //           placeholder="Seller Name"
-    //           defaultValue={user?.displayName}
-    //         />
-    //         <input
-            
-    //           className="text-input"
-    //           {...register("salary", { required: true })}
-    //           value={user?.email}
-    //           placeholder="Seller Email"
-              
-    //         //   defaultValue={user?.email}
-    //         />
-    //         <input
-    //           className="text-input"
-    //           {...register("quantity", { required: true })}
-    //           placeholder="Quantity"
-    //           type="number"
-    //         />
-    //         <input
-    //           className="text-input"
-    //           {...register("price", { required: true })}
-    //           placeholder="Price"
-    //           type="number"
-    //         />
-    //         <select className="text-input" {...register("category")}>
-    //           <option value="Engineering">Sub Category</option>
-    //           <option value="Editor">Lego City</option>
-    //           <option value="writer">Lego Cars</option>
-    //           <option value="Developer">Lego Star-Wars</option>
-    //         </select>
-            
-    //         <input
-    //           className="text-input"
-    //           value={user?.email}
-    //           {...register("postedBy")}
-    //           placeholder="your email"
-    //           type="email"
-    //         />
-    //                     <input
-    //           className="text-input"
-    //           {...register("description")}
-    //           placeholder="description"
-    //         />
-    //         </div>
-    //         <input className="submit-btn" value="Post Job" type="submit" />
-    //       </form>
-    //     </div>
-    //     <div className="col-md-4">
-    //       <img
-    //         className="w-100"
-    //         // src="https://i.ibb.co/rthZ75K/pngtree-job-vacancy-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"
-    //         alt=""
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
     );
 };
 
