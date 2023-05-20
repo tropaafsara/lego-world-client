@@ -1,52 +1,41 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const UpdateModal = ({props}) => {
+const UpdateModal = ({booking}) => {
 
     
     const { user } = useContext(AuthContext);
     const [selects, setSelects] = useState();
 
 
-    // const { _id, toyName, price, img, status, availableQuantity, rating } = bookings;
-    
-
-    const [bookings, setBookings] = useState([]);
-
-    const url = `http://localhost:9000/bookings?email=${user?.email}`;
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setBookings(data))
-    }, [url]);
-
-
+    const { toyName, price, img, availableQuantity, rating, description, customerName, category } = booking;
+    console.log(booking);
     const handleUpdate = event => {
         event.preventDefault();
-        const form = event.target;
-        const namee = form.namee.value;
-        const seller = form.sellerName.value;
-        const img = form.img.value;
-        const price = form.price.value;
-        const quantity = form.quantity.value;
-        const description = form.description.value;
-        const rating = form.rating.value;
-        const email = user?.email;
-        const update = {
-            customerName: seller,
-            email,
-            img: img,
-            toyName: namee,
-            price: price,
-            availableQuantity: quantity,
-            description: description,
-            rating: rating,
-            category: selects
-        }
+        
+        // const form = event.target;
+        // const namee = form.namee.value;
+        // const seller = form.sellerName.value;
+        // const img = form.img.value;
+        // const price = form.price.value;
+        // const quantity = form.quantity.value;
+        // const description = form.description.value;
+        // const rating = form.rating.value;
+        // const email = user?.email;
+        // const update = {
+        //     customerName: seller,
+        //     email,
+        //     img: img,
+        //     toyName: namee,
+        //     price: price,
+        //     availableQuantity: quantity,
+        //     description: description,
+        //     rating: rating,
+        //     category: selects
+        // }
 
-        console.log(update);
+        // console.log(update);
 
         // fetch('http://localhost:9000/bookings', {
         //     method: 'PUT',
@@ -69,9 +58,6 @@ const UpdateModal = ({props}) => {
     }
     return (
 
-        
-
-
         <div>
 
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
@@ -86,22 +72,22 @@ const UpdateModal = ({props}) => {
                             <label className="label">
                                 <span className="label-text">Picture Url</span>
                             </label>
-                            <input type="text" name="img" className="input input-bordered" />
+                            <input type="text" name="img" defaultValue={img} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Toy Name</span>
                             </label>
-                            <input type="text" name="namee"   className="input input-bordered" />
+                            <input type="text" name="namee" defaultValue={toyName}  className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Seller Name</span>
                             </label>
-                            <input type="text"  name="sellerName" className="input input-bordered" />
+                            <input type="text"  name="sellerName" defaultValue={customerName} className="input input-bordered" />
                         </div>
                         <div className="form-control">
-                            <select value={selects} onChange={event=>setSelects(event.target.value)} id="">
+                            <select defaultValue={category} value={selects} onChange={event=>setSelects(event.target.value)} id="">
                                 <option>Choose a Category</option>
                                 <option value="lego-city">Lego-City</option>
                                 <option value="lego-architecture">Lego-Architecture</option>
@@ -122,25 +108,25 @@ const UpdateModal = ({props}) => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="number" name="price"  className="input input-bordered" />
+                            <input type="number" name="price" defaultValue={price}  className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Available Quantity</span>
                             </label>
-                            <input type="number" name="quantity" className="input input-bordered" />
+                            <input type="number" name="quantity" defaultValue={availableQuantity} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="text" name="rating" className="input input-bordered" />
+                            <input type="text" name="rating" defaultValue={rating} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Detail Description</span>
                             </label>
-                            <input type="text" name="description" className="input input-bordered" />
+                            <input type="text" name="description" defaultValue={description} className="input input-bordered" />
                         </div>
                     </div>
                     <div className="form-control mt-6">

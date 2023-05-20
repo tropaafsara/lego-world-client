@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+
 import UpdateModal from '../UpdateModal/UpdateModal'
 const BookingRow = ({ booking, handleDelete }) => {
     const { _id, toyName, price, img, status, availableQuantity, rating } = booking;
-
-
-
-
-
-
+    
 
     return (
         <tr>
@@ -30,12 +25,15 @@ const BookingRow = ({ booking, handleDelete }) => {
             <td>{availableQuantity}</td>
             <td>{rating}</td>
             <th>
-                {/* <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs" htmlFor="my-modal-5">Update</button> */}
-                
                 <label htmlFor="my-modal-3" className="btn">Update</label>
+                
                 <UpdateModal
                 booking={booking}
                 ></UpdateModal>
+                
+
+                
+                
 
             </th>
         </tr>

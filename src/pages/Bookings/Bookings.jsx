@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import BookingRow from './BookingRow';
 import Swal from 'sweetalert2';
+import UpdateModal from '../UpdateModal/UpdateModal';
 
     
 
@@ -105,7 +106,11 @@ const Bookings = () => {
                                 booking={booking}
                                 handleDelete={handleDelete}
                                 handleBookingConfirm={handleBookingConfirm}
-                            ></BookingRow>)
+                                
+                            ></BookingRow>
+                            
+                            
+                            )
                         }
                     </tbody>
 
