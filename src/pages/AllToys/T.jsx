@@ -7,12 +7,12 @@ const T = ({ toys }) => {
     } = toys || {};
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl p-8">
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
-                <div className="card-body">
+                <div className="card-body mt-8 rounded ">
                     <h2 className="card-title">{toyName}</h2>
                     <h1>Price: ${price}</h1>
-                    <div className='flex gap-4'>
+                    <div className='flex gap-4 '>
                     <div className="rating ">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />

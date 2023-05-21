@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AllToys from '../AllToys/AllToys';
 import Toy from '../AllToys/Toy';
-import T from '../../T';
+import T from '../AllToys/T';
 
 const TabCategory = () => {
 
@@ -22,7 +22,7 @@ const TabCategory = () => {
         setActiveTab(tabName);
       };
     return (
-        <div className=''>
+        <div className='mx-8'>
             <div
               onClick={() => handleTabClick("lego-city")}
               className={`tab  tab2 remote ${
@@ -53,7 +53,7 @@ const TabCategory = () => {
                             toys={toys}></Toy>
                         ))}
             </div> */}
-            <div className='grid lg:grid-cols-3 md:grid-cols-2'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 '>
             {alltoys?.map((toys) => (
                             <T key={toys._id}
                             toys={toys}></T>

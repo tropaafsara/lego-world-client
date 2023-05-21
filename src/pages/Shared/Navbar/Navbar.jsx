@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo1.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -26,10 +26,7 @@ const NavBar = () => {
                     <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
                     <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">{user.displayName}</span>
                     </div>
-            {/* <div className='group relative m-1 flex justify-center'>
-                    <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
-                    <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">{user.displayName}</span>
-                    </div> */}
+            
         </> 
         : <li> <NavLink to="/login">Login</NavLink> </li>
         
@@ -47,8 +44,9 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-5xl">
-                    {/* <img className="w-1/2" src={logo} alt="" /> */}
+                <Link to="/" className="btn btn-ghost normal-case text-5xl group relative m-1 flex justify-center">
+                    <img className="mx-5 relative w-10 h-10 overflow-hidden rounded" src={logo} alt="" />
+                    <h1 className="text-3xl text-amber-300">Lego World</h1>
                 </Link>
             </div>
             
