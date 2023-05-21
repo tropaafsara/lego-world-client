@@ -22,37 +22,33 @@ const TabCategory = () => {
         setActiveTab(tabName);
       };
     return (
-        <div className='mx-8'>
+        <div className='mx-8 mt-8'>
+            <div className='flex justify-between font-bold p-4 mb-4 border-4 rounded-full border-sky-600'>
             <div
               onClick={() => handleTabClick("lego-city")}
-              className={`tab  tab2 remote ${
-                activeTab == "lego-city" ? " bg-danger text-white" : ""
+              className={`tab  tab2 remote text-2xl${
+                activeTab == "lego-city" ? " text-sky-600" : ""
               }`}
             >
               Lego City
             </div>
             <div
               onClick={() => handleTabClick("lego-architecture")}
-              className={`tab  tab2 Offline ${
-                activeTab == "lego-architecture" ? " bg-danger text-white" : ""
+              className={`tab  tab2 Offline  text-2xl${
+                activeTab == "lego-architecture" ? "  text-sky-600 " : ""
               }`}
             >
               Lego Architecture
             </div>
             <div
               onClick={() => handleTabClick("lego-cars")}
-              className={`tab  tab2 Offline ${
-                activeTab == "lego-cars" ? " bg-danger text-white" : ""
+              className={`tab  tab2 Offline  text-2xl${
+                activeTab == "lego-cars" ? " text-sky-600" : ""
               }`}
             >
               Lego Cars
             </div>
-            {/* <div >
-            {alltoys?.map((toys) => (
-                            <Toy key={toys._id}
-                            toys={toys}></Toy>
-                        ))}
-            </div> */}
+            </div>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 '>
             {alltoys?.map((toys) => (
                             <T key={toys._id}

@@ -14,10 +14,10 @@ const Home = () => {
            
             <Gallary></Gallary>
             <hr className='mt-7 mb-5'></hr>
-            <h1 className='mt-8 mb-8 text-3xl text-center'>Our Testimonial</h1>
+            <h1 className='mt-8 mb-8 text-3xl text-center font-bold '>Our Testimonial</h1>
             <Testimonial></Testimonial>
             <hr className='mt-7 mb-5'></hr>
-            <h1 className='mt-8 text-3xl text-center'>Shop By Category</h1>
+            <h1 className='mt-8 text-3xl text-center font-bold'>Shop By Category</h1>
             <div className='mt-5 mb-5'>
             <TabCategory></TabCategory>
             </div>

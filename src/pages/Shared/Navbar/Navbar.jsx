@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../../assets/logo2.png'
+import logo from '../../../assets/images/banner/logo3.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -47,7 +47,7 @@ const NavBar = () => {
                 </div>
                 <Link to="/" className=" normal-case text-5xl group relative m-1 flex justify-center">
                     <img className="mx-5 relative w-10 h-10 overflow-hidden rounded" src={logo} alt="" />
-                    <h1 className="text-3xl text-amber-300">Lego World</h1>
+                    <h1 className="text-3xl text-sky-600 font-bold">Lego World</h1>
                 </Link>
             </div>
             
