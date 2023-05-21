@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../../assets/logo1.png'
+import logo from '../../../assets/logo2.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 
@@ -16,11 +16,12 @@ const NavBar = () => {
     const navItems = <>
         <li><NavLink to="/">Home</NavLink> </li>
         <li> <NavLink to="/alltoys">All Toys</NavLink> </li>
-        <li> <NavLink to="/blog">Blogs</NavLink> </li>
+        
         
         { user?.email ?  <>
             <li><NavLink to="/addtoys">Add Toy</NavLink></li>
             <li><NavLink to="/bookings">My Toys</NavLink></li>
+            <li> <NavLink to="/blog">Blogs</NavLink> </li>
             <li><button onClick={handleLogOut}>Log out</button></li>
             <div className='group relative m-1 flex justify-center'>
                     <img className=' mx-5 relative w-10 h-10 overflow-hidden rounded-full' src={user.photoURL} alt="" />
@@ -44,7 +45,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-5xl group relative m-1 flex justify-center">
+                <Link to="/" className=" normal-case text-5xl group relative m-1 flex justify-center">
                     <img className="mx-5 relative w-10 h-10 overflow-hidden rounded" src={logo} alt="" />
                     <h1 className="text-3xl text-amber-300">Lego World</h1>
                 </Link>
@@ -55,9 +56,6 @@ const NavBar = () => {
                     {navItems}
                 </ul>
             </div>
-            {/* <div className="navbar-end">
-            <button className="btn btn-outline btn-warning">Appointment</button>
-            </div> */}
         </div>
     );
 };
