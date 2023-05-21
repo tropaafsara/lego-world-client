@@ -3,19 +3,19 @@ import React from 'react';
 const Testimonial = () => {
     return (
         <div className='grid grid-cols-2 gap-6 '>
-            <div className='flex justify-between rounded-lg p-8 bg-yellow-800	'>
+            <div className='flex justify-between rounded-lg p-8 bg-gradient-to-r from-cyan-500 to-blue-500 text-white	shadow-lg shadow-blue-500/50'>
                 <div className='p-3'>
                     <h1 className='mb-3'>Products</h1>
                     <span className='text-3xl font-bold'>3455</span>
                 </div>
                 <div className='p-3'>
                     <h1 className='mb-3'>Customers</h1>
-                    <span className='text-3xl font-bold'>30k +</span>
+                    <span className='text-3xl font-bold'>30k+</span>
                 </div>
 
                 <div className='p-3'>
                     <h1 className='mb-3'>Happy</h1>
-                    <span className='text-3xl font-bold mt-'>21k +</span>
+                    <span className='text-3xl font-bold mt-'>21k+</span>
                 </div>
             </div >
 

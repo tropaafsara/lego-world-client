@@ -26,7 +26,7 @@ const Toy = ({ toys }) => {
             <td>{category}</td>
             <td>
             <Link to={`/toys/${_id}`}>
-            <button   className='btn btn-ghost '>View Details</button>
+            <button   className='btn btn-ghost bg-sky-600 hover:bg-cyan-500 font-bold'>View Details</button>
             </Link>
             </td>
 
