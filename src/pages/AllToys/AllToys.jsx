@@ -38,10 +38,10 @@ const AllToys = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
-                                <label>
+                            <th className='text-2xl'>#
+                                {/* <label>
                                     <input type="checkbox" className="checkbox" />
-                                </label>
+                                </label> */}
                             </th>
                             <th>Image</th>
                             <th>Toy Name</th>

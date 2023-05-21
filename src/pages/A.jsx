@@ -53,6 +53,7 @@ const A = () => {
                     timer: 1500
                   })
             }
+            form.reset()
         })
     }
     return (

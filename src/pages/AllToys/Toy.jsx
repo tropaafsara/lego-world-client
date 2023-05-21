@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Toy = ({ toys }) => {
+const Toy = ({ toys,index }) => {
     const {
         _id, price, img, toyName, availableQuantity, customerName, category, rating
     } = toys || {};
     return (
         <tr className='bg-white '>
+            
             <th>
             </th>
+            
             <td>
                 <div className="avatar">
                     <div className="rounded w-24 h-24">
