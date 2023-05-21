@@ -12,7 +12,7 @@ const TabCategory = () => {
     const [activeTab, setActiveTab] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:9000/bookings/${activeTab}`)
+        fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings/${activeTab}`)
             .then(res => res.json())
             .then(result => {
                 setAllToys(result);

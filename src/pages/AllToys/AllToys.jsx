@@ -6,7 +6,7 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:9000/bookings")
+        fetch("https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings")
             .then(res => res.json())
             .then(result => {
                 setAllToys(result);
@@ -15,7 +15,7 @@ const AllToys = () => {
 
 
     const handleSearch = () =>{
-        fetch(`http://localhost:9000/searchByToyname/${searchText}`)
+        fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/searchByToyname/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             setAllToys(data);

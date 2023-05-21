@@ -10,7 +10,7 @@ const Bookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:9000/bookings?email=${user?.email}`;
+    const url = `https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -28,7 +28,7 @@ const Bookings = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             
-            fetch(`http://localhost:9000/bookings/${id}`, {
+            fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings/${id}`, {
             method: 'DELETE'
             })
                 .then(res => res.json())
@@ -54,7 +54,7 @@ const Bookings = () => {
 
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:9000/bookings/${id}`, {
+        fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

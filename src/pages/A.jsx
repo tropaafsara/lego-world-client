@@ -34,7 +34,7 @@ const A = () => {
 
         console.log(booking);
 
-        fetch('http://localhost:9000/bookings', {
+        fetch('https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'

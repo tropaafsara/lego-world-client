@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         {
             path: '/toys/:id',
             element: <ToyInfo></ToyInfo>,
-            loader: ({params})=> fetch(`http://localhost:9000/toys/${params.id}`)
+            loader: ({params})=> fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/toys/${params.id}`)
         },
         
         {
