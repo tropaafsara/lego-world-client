@@ -58,7 +58,7 @@ const Login = () => {
                         </form>
                         <button onClick={handleGoogleSignIn} className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 text-white mt-2" > <span className='text-sm'> Google SignIn</span> </button>
                            
-                        <p className='my-4 text-center'>New to Car Doctors <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
+                        <p className='my-4 text-center'>New to Lego World? <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>
                 </div>
             </div>
