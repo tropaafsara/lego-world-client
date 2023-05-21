@@ -57,10 +57,10 @@ const A = () => {
     }
     return (
         <div>
-            <div>
+            <div >
                 <h2 className='text-center text-3xl'>Add a Toy </h2>
                 <form onSubmit={handleBookService}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Picture Url</span>

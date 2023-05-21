@@ -6,7 +6,7 @@ const T = ({ toys }) => {
     } = toys || {};
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl p-8 shadow-lg shadow-blue-500/50">
+            <div className="card w-96 bg-base-100 shadow-xl p-8 shadow-lg shadow-blue-500/50 bg-white">
                 <figure><img className='w-full' src={img} alt="Shoes" /></figure>
                 <div className="card-body mt-8 rounded ">
                     <h2 className="card-title">{toyName}</h2>

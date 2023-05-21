@@ -6,7 +6,7 @@ const Toy = ({ toys }) => {
         _id, price, img, toyName, availableQuantity, customerName, category, rating
     } = toys || {};
     return (
-        <tr>
+        <tr className='bg-white '>
             <th>
             </th>
             <td>
