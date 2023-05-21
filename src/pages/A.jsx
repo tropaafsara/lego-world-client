@@ -80,7 +80,7 @@ const A = () => {
                             <input type="text" defaultValue={user?.displayName} name="sellerName" className="input input-bordered" />
                         </div>
                         <div className="form-control">
-                            <select value={selects} onChange={event=>setSelects(event.target.value)} id="">
+                            <select className='border border-black' value={selects} onChange={event=>setSelects(event.target.value)} id="">
                                 <option>Choose a Category</option>
                                 <option value="lego-city">Lego-City</option>
                                 <option value="lego-architecture">Lego-Architecture</option>
@@ -101,7 +101,7 @@ const A = () => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="number" name="price" className="input input-bordered" />
+                            <input type="number" name="price" className="input input-bordered" placeholder='$' />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -113,7 +113,7 @@ const A = () => {
                             <label className="label">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="text" name="rating" className="input input-bordered" />
+                            <input type="number" name="rating" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -123,7 +123,7 @@ const A = () => {
                         </div>
                     </div>
                     <div className="form-control mt-6">
-                        <input className="btn btn-primary btn-block" type="submit" value="Add a Toy" />
+                        <input className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 font-bold text-white btn-block" type="submit" value="Add a Toy" />
                     </div>
                 </form>
                 <div className="card-body">

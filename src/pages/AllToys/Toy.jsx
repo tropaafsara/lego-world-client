@@ -26,15 +26,10 @@ const Toy = ({ toys }) => {
             <td>{category}</td>
             <td>
             <Link to={`/toys/${_id}`}>
-            <button   className='btn btn-ghost bg-sky-600 hover:bg-cyan-500 font-bold'>View Details</button>
+            <button   className='btn btn-ghost bg-sky-600 hover:bg-cyan-500 font-bold text-white'>View Details</button>
             </Link>
             </td>
 
-            {/* <th>
-                {
-                    status === 'update' ? <span className="font-bold text-primary">Updated Successfully</span> :
-                        <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs">Update</button>}
-            </th> */}
         </tr>
 
 

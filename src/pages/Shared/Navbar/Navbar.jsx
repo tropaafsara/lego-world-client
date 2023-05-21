@@ -76,7 +76,7 @@ const NavBar = () => {
         }
     </>
     return (
-        <div className="navbar bg-base-100 h-28 mb-4 font-bold">
+        <div className="navbar bg-base-100 h-28 mb-4 font-bold bg-white">
 
             <div className="navbar-start">
                 <div className="dropdown">
@@ -89,7 +89,7 @@ const NavBar = () => {
                 </div>
                 <Link to="/" className=" normal-case text-5xl group relative m-1 flex justify-center">
                     <img className="mx-5 relative w-10 h-10 overflow-hidden rounded" src={logo} alt="" />
-                    <h1 className="text-3xl text-sky-600 font-bold">Lego World</h1>
+                    <h1 className="text-3xl text-sky-600 font-bold animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent font-black">Lego World</h1>
                 </Link>
             </div>
 

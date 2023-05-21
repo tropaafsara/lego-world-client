@@ -25,13 +25,13 @@ const AllToys = () => {
     return (
 
         <div>
-            <div className='text-end '>
+            <div className='text-end mb-4'>
             <input
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
-            className="p-1 border rounded-md"
+            className="p-1 border-4 rounded-md border-sky-600"
           />{" "}
-            <button onClick={handleSearch} className='text-center'>Search</button>
+            <button onClick={handleSearch} className='text-center text-xl'>Search</button>
             </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">

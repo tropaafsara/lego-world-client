@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .btn{
-    color: black;
-    background-color: #0284c7;
-  
-} */
+body{
+    background-color: white;
+}
+.content-container {
+    min-height: calc(100vh - 34px);
+  }

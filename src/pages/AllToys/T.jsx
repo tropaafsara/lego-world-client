@@ -14,7 +14,7 @@ const T = ({ toys }) => {
                     {/* <span className='text-sky-600 font-black text-3xl'><BsCurrencyDollar></BsCurrencyDollar></span> */}
                     <h1 className='text-sky-600 font-black text-3xl'> ${price}</h1>
                     </div>
-                    <div className='flex gap-4 '>
+                    <div className='flex gap-2 items-center'>
                     <div className="rating ">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
@@ -23,10 +23,10 @@ const T = ({ toys }) => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
                     </div>
-                    {rating}
+                    <h1 className='text-2xl'>{rating}</h1>
                     </div >
                     <Link to={`/toys/${_id}`}>
-                        <button className='btn btn-ghost  bg-sky-600 hover:bg-cyan-500 font-bold mt-5 '>View Details</button>
+                        <button className='btn btn-ghost  bg-sky-600 hover:bg-cyan-500  mt-5 text-white'>View Details</button>
                     </Link>
                 </div>
             </div>

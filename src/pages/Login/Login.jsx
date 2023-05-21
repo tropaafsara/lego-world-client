@@ -27,7 +27,7 @@ const Login = () => {
     
 
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-white">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="w-1/2 mr-12">
                     {/* <img src={img} alt="" /> */}
@@ -52,11 +52,11 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 text-white" type="submit" value="Login" />
                                 
                             </div>
                         </form>
-                        <button onClick={handleGoogleSignIn} className="btn btn-primary mt-2" > <span className='text-sm'>Sign In with</span> Google</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 text-white mt-2" > <span className='text-sm'> Google SignIn</span> </button>
                            
                         <p className='my-4 text-center'>New to Car Doctors <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
                     </div>

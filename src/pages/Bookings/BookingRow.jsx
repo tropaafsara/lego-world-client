@@ -25,7 +25,7 @@ const BookingRow = ({ booking, handleDelete }) => {
             <td>{availableQuantity}</td>
             <td>{rating}</td>
             <th>
-                <label htmlFor="my-modal-3" className="btn">Update</label>
+                <label htmlFor="my-modal-3" className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 font-bold">Update</label>
                 
                 <UpdateModal
                 key={booking._id}

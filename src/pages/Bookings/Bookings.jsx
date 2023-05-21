@@ -78,7 +78,7 @@ const Bookings = () => {
 
 
     return (
-        <div>
+        <div className='content-container'>
             <h2 className="text-5xl text-center mb-6"> Total Added Toys: {bookings.length}</h2>
             <div className="overflow-x-auto w-full">
                 

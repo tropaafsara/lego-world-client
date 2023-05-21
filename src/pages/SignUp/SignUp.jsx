@@ -82,7 +82,7 @@ const SignUp = () => {
           <input type="text" name='photo' placeholder="photo" className="input input-bordered" required />
         </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn btn-ghost bg-sky-600 hover:bg-cyan-500 text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <p className='my-4 text-center'>Already Have an Account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
