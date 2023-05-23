@@ -9,10 +9,11 @@ const TabCategory = () => {
 
     const [alltoys, setAllToys] = useState([])
     // const [activeTab, setActiveTab] = useState("lego-city")
-    const [activeTab, setActiveTab] = useState()
+    const [activeTab, setActiveTab] = useState("")
 
     useEffect(() => {
         fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings/${activeTab}`)
+        // fetch(`https://lego-world-server-tasnimafsara12-gmailcom.vercel.app/bookings/${activeTab}`)
             .then(res => res.json())
             .then(result => {
                 setAllToys(result);
@@ -26,30 +27,39 @@ const TabCategory = () => {
             <div className='flex justify-between font-bold p-4 mb-4 border-4 rounded-full border-sky-600'>
             <div
               onClick={() => handleTabClick("lego-city")}
-              className={`tab  tab2 remote text-2xl${
-                activeTab == "lego-city" ? " text-sky-600" : ""
+              className={`tab tab2 remote text-2xl ${
+                activeTab === "lego-city" ? "text-sky-600" : ""
               }`}
+              // className={`tab  tab2 remote text-2xl${
+              //   activeTab == "lego-city" ? " text-sky-600" : ""
+              // }`}
             >
               Lego City
             </div>
             <div
               onClick={() => handleTabClick("lego-architecture")}
-              className={`tab  tab2 Offline  text-2xl${
-                activeTab == "lego-architecture" ? "  text-sky-600 " : ""
+              // className={`tab  tab2 Offline  text-2xl${
+              //   activeTab == "lego-architecture" ? "  text-sky-600 " : ""
+              // }`}
+              className={`tab tab2 Offline text-2xl ${
+                activeTab === "lego-architecture" ? "text-sky-600" : ""
               }`}
             >
               Lego Architecture
             </div>
             <div
               onClick={() => handleTabClick("lego-cars")}
-              className={`tab  tab2 Offline  text-2xl${
-                activeTab == "lego-cars" ? " text-sky-600" : ""
+              className={`tab tab2 Offline text-2xl ${
+                activeTab === "lego-cars" ? "text-sky-600" : ""
               }`}
+              // className={`tab  tab2 Offline  text-2xl${
+              //   activeTab == "lego-cars" ? " text-sky-600" : ""
+              // }`}
             >
               Lego Cars
             </div>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 '>
+            <div className='grid lg:grid-cols-4 md:grid-cols-2 gap-5 '>
             {alltoys?.map((toys) => (
                             <T key={toys._id}
                             toys={toys}></T>

@@ -5,11 +5,11 @@ const T = ({ toys }) => {
         _id, price, img, toyName, availableQuantity, customerName, category, rating
     } = toys || {};
     return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl p-8 shadow-lg shadow-blue-500/50 bg-white">
-                <figure><img className='w-full' src={img} alt="Shoes" /></figure>
+        <div className=''>
+            <div className="card w-full bg-base-100 shadow-xl p-3 shadow-lg shadow-blue-500/50 bg-white ">
+                <figure><img className='w-full' src={img}  /></figure>
                 <div className="card-body mt-8 rounded ">
-                    <h2 className="card-title">{toyName}</h2>
+                    <h2 className="card-title text-base">{toyName}</h2>
                     <div className='flex items-center'>
                     {/* <span className='text-sky-600 font-black text-3xl'><BsCurrencyDollar></BsCurrencyDollar></span> */}
                     <h1 className='text-sky-600 font-black text-3xl'> ${price}</h1>
@@ -23,10 +23,10 @@ const T = ({ toys }) => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
                     </div>
-                    <h1 className='text-2xl'>{rating}</h1>
+                    <h1 className=''>{rating}</h1>
                     </div >
                     <Link to={`/toys/${_id}`}>
-                        <button className='btn btn-ghost  bg-sky-600 hover:bg-cyan-500  mt-5 text-white'>View Details</button>
+                        <button className='btn btn-ghost  bg-sky-600 hover:bg-cyan-500   text-white'>View Details</button>
                     </Link>
                 </div>
             </div>
